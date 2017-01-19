@@ -14,6 +14,6 @@ public class VLIst {
     }
 
     public VLIst() {
-        this.vertexList = new CopyOnWriteArrayList<>();
+        this.vertexList = new CopyOnWriteArrayList<Vertex>();
     }
 }
