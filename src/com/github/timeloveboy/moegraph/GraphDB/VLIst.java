@@ -7,6 +7,10 @@ import java.util.concurrent.CopyOnWriteArrayList;
  * Created by timeloveboy on 17-1-19.
  */
 public class VLIst {
+    public List<Vertex> getVertexList() {
+        return vertexList;
+    }
+
     List<Vertex> vertexList;
 
     public VLIst(List<Vertex> vertexList) {
