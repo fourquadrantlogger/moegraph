@@ -9,7 +9,7 @@ import java.io.IOException;
 /**
  * Created by timeloveboy on 17-1-20.
  */
-public class like extends DefaultHandle {
+public class fans extends DefaultHandle {
     @Override
     public void GET(IHttpRequest req, IHttpResponse resp) throws IOException {
         resp.write("get");

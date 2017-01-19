@@ -1,6 +1,7 @@
 package com.github.timeloveboy.moegraph.GraphDB;
 
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by timeloveboy on 17-1-19.
@@ -8,21 +9,23 @@ import java.util.List;
 public class Vertex {
     public Vertex(int vid) {
         this.vid = vid;
+        like = new HashSet<Vertex>();
+        fans = new HashSet<Vertex>();
     }
 
     public int getVid() {
         return vid;
     }
 
-    public List<Vertex> getFans() {
+    public Set<Vertex> getFans() {
         return fans;
     }
 
-    public List<Vertex> getLike() {
+    public Set<Vertex> getLike() {
         return like;
     }
 
     int vid;
-    List<Vertex> like;
-    List<Vertex> fans;
+    Set<Vertex> like;
+    Set<Vertex> fans;
 }
