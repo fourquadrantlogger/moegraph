@@ -1,0 +1,13 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+    <version>1.0.0</version>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>moegraph</artifactId>
+    <groupId>github.com.timeloveboy</groupId>
+    <dependencies>
+        <dependency>
+            <groupId>com.github.timeloveboy</groupId>
+            <artifactId>moeserver</artifactId>
+            <version>0.0.2</version>
+        </dependency>
+    </dependencies>
+</project>
