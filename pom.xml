@@ -9,7 +9,11 @@
             <artifactId>moeserver</artifactId>
             <version>0.0.2</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.24</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -29,6 +33,7 @@
         </plugins>
 
         <sourceDirectory>src</sourceDirectory>
+        <outputDirectory>out</outputDirectory>
         <testSourceDirectory>test</testSourceDirectory>
     </build>
 </project>
