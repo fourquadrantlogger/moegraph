@@ -51,7 +51,7 @@ public class computing {
                                 Map<Integer, Integer> id_count = Common.GetThemCommonFans(u_likes_min1000000);
                                 id_count_max10 = filter.filter_map(id_count, 1 << 32, 10);
                             }
-                            result.add(id_count_max10);
+                            result.put(id_count_max10);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
