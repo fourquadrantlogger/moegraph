@@ -36,7 +36,7 @@ public class computing {
 
     public static void Mapper(Integer[] Ids, String resultfilename) {
         Log.v("start mapping");
-        finalDB.GetDB();
+
         for (int i = 0; i < Runtime.getRuntime().availableProcessors(); i++) {
             new Thread(new Runnable() {
                 public void run() {
