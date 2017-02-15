@@ -42,7 +42,6 @@ public class computing {
                 public void run() {
                     while (true) {
                         try {
-
                             Integer uid = task.take();
                             User user = finalDB.GetDB().getUser(uid);
                             Map<Integer, Integer> id_count_max10 = new HashMap<Integer, Integer>();
@@ -52,13 +51,10 @@ public class computing {
                                 Map<Integer, Integer> id_count = Common.GetThemCommonFans(u_likes_min1000000);
                                 id_count_max10 = filter.filter_map(id_count, 1 << 32, 10);
                             }
-
                             result.add(id_count_max10);
-
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
-
                     }
                 }
 
@@ -83,6 +79,7 @@ public class computing {
 
         new Thread(new Runnable() {
             public void run() {
+                Log.v("start duce ");
                 for (int d = 0; d < Ids.length; d++) {
                     try {
                         Map<Integer, Integer> c = result.take();
