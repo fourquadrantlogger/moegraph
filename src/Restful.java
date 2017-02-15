@@ -1,5 +1,3 @@
-package com.github.timeloveboy.moegraph;
-
 import com.github.timeloveboy.moeserver.Server;
 import com.github.timeloveboy.moeserver.ServerDriver.netty.nettyServer;
 
