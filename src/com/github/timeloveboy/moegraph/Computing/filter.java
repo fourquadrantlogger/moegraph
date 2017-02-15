@@ -27,7 +27,7 @@ public class filter {
         for (Integer key : src.keySet()) {
             Integer value = src.get(key);
             if (value > min && value < max) {
-                out.put(key, value)
+                out.put(key, value);
             }
         }
 
