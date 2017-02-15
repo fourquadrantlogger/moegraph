@@ -3,10 +3,7 @@ package com.github.timeloveboy.moegraph.Computing;
 import com.github.timeloveboy.moegraph.GraphDB.User;
 import com.github.timeloveboy.moegraph.finalDB;
 
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by paidian on 17-2-15.
@@ -26,10 +23,11 @@ public class filter {
     }
 
     public static Map<Integer, Integer> filter_map(Map<Integer, Integer> src, Integer max, Integer min) {
+        Map<Integer, Integer> out = new HashMap<>();
         for (Integer key : src.keySet()) {
             Integer value = src.get(key);
-            if (value < min || value > max) {
-                src.remove(key);
+            if (value > min && value < max) {
+                out.put(key, value)
             }
         }
 
