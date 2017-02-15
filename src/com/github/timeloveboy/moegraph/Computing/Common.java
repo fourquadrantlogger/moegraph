@@ -21,9 +21,9 @@ public class Common {
             while (f.hasNext()) {
                 Integer fans = f.next();
                 if (likesmap.containsKey(fans)) {
-                    likesmap.put(f.next(), likesmap.get(fans));
+                    likesmap.put(fans, likesmap.get(fans));
                 } else {
-                    likesmap.put(f.next(), 1);
+                    likesmap.put(fans, 1);
                 }
 
             }
