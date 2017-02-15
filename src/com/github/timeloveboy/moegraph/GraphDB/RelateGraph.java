@@ -49,7 +49,7 @@ public class RelateGraph {
         return relatecount;
     }
 
-    public int GetUserCount() {
+    public Integer GetUserCount() {
         return users.size();
     }
 
