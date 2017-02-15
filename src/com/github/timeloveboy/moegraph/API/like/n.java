@@ -17,10 +17,8 @@ import java.util.Map;
  * Created by paidian on 17-2-8.
  */
 public class n extends DefaultHandle {
-
     @Override
     public void POST(IHttpRequest req, IHttpResponse resp) throws Exception {
-
         Map<String, String> param = utils.UrlUtil.splitQuery(req.getUrl().getQuery());
         String type = "";
         if (param.containsKey("type")) {
@@ -38,7 +36,6 @@ public class n extends DefaultHandle {
                     JSONObject User_Like = (JSONObject) o;
                     int vid1 = Integer.parseInt(User_Like.get("vid1").toString());
                     int vid2 = Integer.parseInt(User_Like.get("vid2").toString());
-
                     finalDB.GetDB().Like(vid1, vid2);
                     ok_count++;
                 }
