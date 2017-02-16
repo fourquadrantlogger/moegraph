@@ -25,6 +25,18 @@ public class computing {
         task = new LinkedBlockingQueue<>(100000);
     }
 
+    public static void save(String resultfilename) {
+        CreateFileUtil.createDir("output");
+        try {
+            FileWriter fw = new FileWriter("output/" + resultfilename, false);
+            fw.write(Result.toString());
+            Log.v("end duce ");
+            reset();
+
+        } catch (IOException E) {
+            E.printStackTrace();
+        }
+    }
     public static boolean Start = false;
     public static Integer Now_vid = 1;
     public static int Maxfans = 1000000;
@@ -100,16 +112,7 @@ public class computing {
                     }
                 }
 
-                CreateFileUtil.createDir("output");
-                try {
-                    FileWriter fw = new FileWriter("output/" + resultfilename, false);
-                    fw.write(Result.toString());
-                    Log.v("end duce ");
-                    reset();
-
-                } catch (IOException E) {
-                    E.printStackTrace();
-                }
+                save(resultfilename);
 
             }
         }).start();
